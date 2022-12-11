@@ -51,7 +51,7 @@ double map(int num, int s, int e, int m, int n)
     return (num-s)/(double)(e-s) * (n-m) + m;
 }
 
-void render_mandelbrot_set()
+void render_julia_set()
 {
     int iterations = 1000;
     int y; for(y = 0; y < HEIGHT; ++y) {
@@ -88,7 +88,7 @@ void render_mandelbrot_set()
 int main(void)
 {
     fill_canvas((Color){18, 18, 18});
-    render_mandelbrot_set();
+    render_julia_set();
     saveAsPPM("canvas.ppm");
     return 0;
 }
